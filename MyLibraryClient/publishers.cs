@@ -33,7 +33,11 @@ namespace MyLibraryClient
                         sql_reader = command.ExecuteReader();
                         while (sql_reader.Read())
                         {
-                            listBox1.Items.Add(Convert.ToString(sql_reader["id_publisher"]) + "  " + Convert.ToString(sql_reader["Name"]) + "  " + Convert.ToString(sql_reader["City"]));
+                            //listBox1.Items.Add(Convert.ToString(sql_reader["id_publisher"]) + "  " + Convert.ToString(sql_reader["Name"]) + "  " + Convert.ToString(sql_reader["City"]));
+                            ListViewItem item = new ListViewItem(Convert.ToString(sql_reader["id_publisher"]));
+                            item.SubItems.Add(Convert.ToString(sql_reader["Name"]));
+                            item.SubItems.Add(Convert.ToString(sql_reader["City"]));
+                            listView1.Items.Add(item);
                         }
                     }
 
@@ -96,7 +100,7 @@ namespace MyLibraryClient
 
         private void refresh_button_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
+            listView1.Items.Clear();
             information_list();
         }
 

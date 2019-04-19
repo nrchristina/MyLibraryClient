@@ -38,7 +38,10 @@
             this.input_publisher_name = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -58,7 +61,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.refresh_button);
-            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -69,9 +72,9 @@
             // 
             // refresh_button
             // 
-            this.refresh_button.Location = new System.Drawing.Point(295, 305);
+            this.refresh_button.Location = new System.Drawing.Point(0, 303);
             this.refresh_button.Name = "refresh_button";
-            this.refresh_button.Size = new System.Drawing.Size(165, 45);
+            this.refresh_button.Size = new System.Drawing.Size(784, 76);
             this.refresh_button.TabIndex = 1;
             this.refresh_button.Text = "Обновить";
             this.refresh_button.UseVisualStyleBackColor = true;
@@ -134,15 +137,34 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Название";
             // 
-            // listBox1
+            // listView1
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(3, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(778, 373);
-            this.listBox1.TabIndex = 2;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(0, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(784, 300);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 50;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Название";
+            this.columnHeader2.Width = 220;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Город";
+            this.columnHeader3.Width = 100;
             // 
             // publishers
             // 
@@ -172,6 +194,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button refresh_button;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
