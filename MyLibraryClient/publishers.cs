@@ -20,7 +20,7 @@ namespace MyLibraryClient
         }
         string connection_string = Connector.str_connection;
         SqlDataReader sql_reader = null;
-        public void information_list()
+        private void information_list()
         {
             try
             {
@@ -60,7 +60,14 @@ namespace MyLibraryClient
                 MessageBox.Show(ex.Message.ToString(), ex.Source.ToString());
             }
         }
-        public void add_publisher()
+
+        private void refresh_button_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            information_list();
+        }
+
+        private void add_publisher()
         {
             try
             {
@@ -79,7 +86,7 @@ namespace MyLibraryClient
                      }
                     else
                     {
-                        MessageBox.Show("Пол 'Название' и 'Город' должны быть заполнены!");
+                        MessageBox.Show("Поля 'Название' и 'Город' должны быть заполнены!");
                     }
                     connection.Close();
 
@@ -94,15 +101,6 @@ namespace MyLibraryClient
         private void add_button_Click(object sender, EventArgs e)
         {
             add_publisher();
-            input_publisher_name.Clear();
-            input_city.Clear();
         }
-
-        private void refresh_button_Click(object sender, EventArgs e)
-        {
-            listView1.Items.Clear();
-            information_list();
-        }
-
     }
 }
