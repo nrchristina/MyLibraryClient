@@ -179,7 +179,9 @@
             this.Controls.Add(this.output_button);
             this.Controls.Add(this.readers_button);
             this.Controls.Add(this.books_button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "main_form";
             this.Text = "Главная";
             this.ResumeLayout(false);

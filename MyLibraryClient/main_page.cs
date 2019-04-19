@@ -154,6 +154,16 @@ namespace MyLibraryClient
         private void exit_button_Click(object sender, EventArgs e)
         {
             Hide();
+            books.Close();
+            readers.Close();
+            output.Close();
+            fine.Close();
+            subscription.Close();
+            authors.Close();
+            genres.Close();
+            parts.Close();
+            publishers.Close();
+            archive.Close();
         }
     }
 }
