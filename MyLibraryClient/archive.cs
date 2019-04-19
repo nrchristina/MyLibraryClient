@@ -22,8 +22,6 @@ namespace MyLibraryClient
         SqlDataReader sql_reader = null;
         public void information_list()
         {
-
-            listBox1.Items.Insert(0, "ID\t" + "Название\t" + "\t" +"Авторы\t" + "Издательство\t" + "Год издания\t" + "Жанр\t" + "Потеряна читателем");
             try
             {
                 using (SqlConnection connection = new SqlConnection(connection_string))
@@ -35,10 +33,14 @@ namespace MyLibraryClient
                         sql_reader = command.ExecuteReader();
                         while (sql_reader.Read())
                         {
-                            listBox1.Items.Add(Convert.ToString(sql_reader["id_archive"]) + "\t" + Convert.ToString(sql_reader["Name"]) + "\t" + "\t" +
-                                Convert.ToString(sql_reader["Authors"]) + "\t" + Convert.ToString(sql_reader["Publisher"]) + "\t" + 
-                                Convert.ToString(sql_reader["Year_of_publication"]) + "\t" + Convert.ToString(sql_reader["Genre"])+ "\t" +
-                                Convert.ToString(sql_reader["Lost_by"]));
+                            ListViewItem item = new ListViewItem(Convert.ToString(sql_reader["id_archive"]));
+                            item.SubItems.Add(Convert.ToString(sql_reader["Name"]));
+                            item.SubItems.Add(Convert.ToString(sql_reader["Authors"]));
+                            item.SubItems.Add(Convert.ToString(sql_reader["Publisher"]));
+                            item.SubItems.Add(Convert.ToString(sql_reader["Year_of_publication"]));
+                            item.SubItems.Add(Convert.ToString(sql_reader["Genre"]));
+                            item.SubItems.Add(Convert.ToString(sql_reader["Lost_by"]));
+                            listView1.Items.Add(item);
                         }
                     }
 

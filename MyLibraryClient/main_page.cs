@@ -33,14 +33,14 @@ namespace MyLibraryClient
 
         private void books_button_Click(object sender, EventArgs e)
         {
-            if (books.IsDisposed)
-                books = new books();
-            if (!books.Visible)
-                books.Show();
-            if (books.WindowState == FormWindowState.Minimized)
-                books.WindowState = FormWindowState.Normal;
-            else
-                books.Activate();
+             if (books.IsDisposed)
+                 books = new books();
+             if (!books.Visible)
+                 books.Show();
+             if (books.WindowState == FormWindowState.Minimized)
+                 books.WindowState = FormWindowState.Normal;
+             else
+                 books.Activate(); 
         }
 
         private void readers_button_Click(object sender, EventArgs e)
