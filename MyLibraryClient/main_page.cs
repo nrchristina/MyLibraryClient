@@ -165,5 +165,19 @@ namespace MyLibraryClient
             publishers.Close();
             archive.Close();
         }
+
+        private void main_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            books.Close();
+            readers.Close();
+            output.Close();
+            fine.Close();
+            subscription.Close();
+            authors.Close();
+            genres.Close();
+            parts.Close();
+            publishers.Close();
+            archive.Close();
+        }
     }
 }

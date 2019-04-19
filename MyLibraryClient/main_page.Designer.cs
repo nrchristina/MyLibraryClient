@@ -184,6 +184,7 @@
             this.MaximizeBox = false;
             this.Name = "main_form";
             this.Text = "Главная";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.main_form_FormClosed);
             this.ResumeLayout(false);
 
         }
