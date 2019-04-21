@@ -282,7 +282,7 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Размер";
-            this.columnHeader3.Width = 100;
+            this.columnHeader3.Width = 154;
             // 
             // refresh_button
             // 
