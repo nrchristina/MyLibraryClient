@@ -53,7 +53,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 354);
+            this.tabControl1.Size = new System.Drawing.Size(799, 449);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -62,7 +62,7 @@
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(784, 307);
+            this.tabPage1.Size = new System.Drawing.Size(783, 402);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список авторов";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             this.listBox1.ItemHeight = 25;
             this.listBox1.Location = new System.Drawing.Point(3, 3);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(778, 301);
+            this.listBox1.Size = new System.Drawing.Size(777, 396);
             this.listBox1.TabIndex = 0;
             // 
             // tabPage2
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 354);
+            this.ClientSize = new System.Drawing.Size(799, 449);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "authors";
