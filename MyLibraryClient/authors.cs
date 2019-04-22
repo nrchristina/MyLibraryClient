@@ -65,5 +65,54 @@ namespace MyLibraryClient
             listView1.Items.Clear();
             information_list();
         }
+
+        private void add_author()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connection_string))
+                {
+                    connection.Open();
+                    if ((!string.IsNullOrEmpty(input_author_name.Text)) && (!string.IsNullOrWhiteSpace(input_author_name.Text)) &&
+                        (!string.IsNullOrEmpty(input_author_surname.Text)) && (!string.IsNullOrWhiteSpace(input_author_surname.Text)) &&
+                        (!string.IsNullOrEmpty(input_author_fathersname.Text)) && (!string.IsNullOrWhiteSpace(input_author_fathersname.Text)))
+                    {
+                        SqlCommand command = new SqlCommand("INSERT INTO [AUTHOR] (Name, Surname, Fathers_name) VALUES (@Name, @Surname, @Fathers_name)", connection);
+                        command.Parameters.AddWithValue("Name", input_author_name.Text);
+                        command.Parameters.AddWithValue("Surname", input_author_surname.Text);
+                        command.Parameters.AddWithValue("Fathers_name", input_author_fathersname.Text);
+                        command.ExecuteNonQuery();
+                        input_author_name.Clear();
+                        input_author_surname.Clear();
+                        input_author_fathersname.Clear();
+                    }
+                    else if ((!string.IsNullOrEmpty(input_author_name.Text)) && (!string.IsNullOrWhiteSpace(input_author_name.Text)) &&
+                        (!string.IsNullOrEmpty(input_author_surname.Text)) && (!string.IsNullOrWhiteSpace(input_author_surname.Text)) &&
+                        (string.IsNullOrEmpty(input_author_fathersname.Text)) || (string.IsNullOrWhiteSpace(input_author_fathersname.Text)))
+                    {
+                        SqlCommand command_1 = new SqlCommand("INSERT INTO [AUTHOR] (Name, Surname, Fathers_name) VALUES (@Name, @Surname)", connection);
+                        command_1.Parameters.AddWithValue("Name", input_author_name.Text);
+                        command_1.Parameters.AddWithValue("Surname", input_author_surname.Text);
+                        command_1.ExecuteNonQuery();
+                        input_author_name.Clear();
+                        input_author_surname.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Поля 'Имя' и 'Фамилия' должны быть заполнены!");
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString());
+            }
+        }
+
+        private void add_button_Click(object sender, EventArgs e)
+        {
+            add_author();
+        }
     }
 }

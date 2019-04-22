@@ -132,7 +132,6 @@ namespace MyLibraryClient
                         MessageBox.Show("Поля 'Имя', 'Фамилия', 'Дата рождения', 'Телефонный номер', 'Email' и 'Абонемент' должны быть заполнены!");
                     }
                     connection.Close();
-
                 }
             }
             catch (Exception ex)
