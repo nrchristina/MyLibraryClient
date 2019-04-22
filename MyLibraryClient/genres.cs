@@ -73,14 +73,12 @@ namespace MyLibraryClient
                 using (SqlConnection connection = new SqlConnection(connection_string))
                 {
                     connection.Open();
-                    if ((!string.IsNullOrEmpty(input_genre_name.Text)) && (!string.IsNullOrWhiteSpace(input_genre_name.Text)) &&
-                        (!string.IsNullOrEmpty(input_part_id.Text)) && (!string.IsNullOrWhiteSpace(input_part_id.Text)))
+                    if ((!string.IsNullOrEmpty(input_genre_name.Text)) && (!string.IsNullOrWhiteSpace(input_genre_name.Text)))
                     {
                         SqlCommand command = new SqlCommand("INSERT INTO [GENRE] (Name) VALUES (@Name)", connection);
                         command.Parameters.AddWithValue("Name", input_genre_name.Text);
                         command.ExecuteNonQuery();
                         input_genre_name.Clear();
-                        input_part_id.Clear();
                     }
                     else
                     {

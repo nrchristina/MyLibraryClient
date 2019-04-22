@@ -37,9 +37,7 @@
             this.refresh_button = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.add_button = new System.Windows.Forms.Button();
-            this.input_part_id = new System.Windows.Forms.TextBox();
             this.input_genre_name = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,9 +108,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.add_button);
-            this.tabPage2.Controls.Add(this.input_part_id);
             this.tabPage2.Controls.Add(this.input_genre_name);
-            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -134,36 +130,18 @@
             this.add_button.UseVisualStyleBackColor = true;
             this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
-            // input_part_id
-            // 
-            this.input_part_id.Location = new System.Drawing.Point(136, 98);
-            this.input_part_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.input_part_id.Name = "input_part_id";
-            this.input_part_id.Size = new System.Drawing.Size(111, 20);
-            this.input_part_id.TabIndex = 21;
-            // 
             // input_genre_name
             // 
-            this.input_genre_name.Location = new System.Drawing.Point(136, 71);
+            this.input_genre_name.Location = new System.Drawing.Point(136, 81);
             this.input_genre_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_genre_name.Name = "input_genre_name";
             this.input_genre_name.Size = new System.Drawing.Size(111, 20);
             this.input_genre_name.TabIndex = 20;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 98);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "ID раздела";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 71);
+            this.label1.Location = new System.Drawing.Point(36, 81);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
@@ -196,9 +174,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button add_button;
-        private System.Windows.Forms.TextBox input_part_id;
         private System.Windows.Forms.TextBox input_genre_name;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button refresh_button;
         private System.Windows.Forms.ListView listView1;

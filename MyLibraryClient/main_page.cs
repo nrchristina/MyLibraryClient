@@ -26,7 +26,6 @@ namespace MyLibraryClient
         subscription subscription = new subscription();
         authors authors = new authors();
         genres genres = new genres();
-        parts parts = new parts();
         publishers publishers = new publishers();
         archive archive = new archive();
         start start = new start();
@@ -115,18 +114,6 @@ namespace MyLibraryClient
                 genres.Activate();
         }
 
-        private void parts_button_Click(object sender, EventArgs e)
-        {
-            if (parts.IsDisposed)
-                parts = new parts();
-            if (!parts.Visible)
-                parts.Show();
-            if (parts.WindowState == FormWindowState.Minimized)
-                parts.WindowState = FormWindowState.Normal;
-            else
-                parts.Activate();
-        }
-
         private void publishers_button_Click(object sender, EventArgs e)
         {
             if (publishers.IsDisposed)
@@ -161,7 +148,6 @@ namespace MyLibraryClient
             subscription.Close();
             authors.Close();
             genres.Close();
-            parts.Close();
             publishers.Close();
             archive.Close();
         }
@@ -175,7 +161,6 @@ namespace MyLibraryClient
             subscription.Close();
             authors.Close();
             genres.Close();
-            parts.Close();
             publishers.Close();
             archive.Close();
         }
