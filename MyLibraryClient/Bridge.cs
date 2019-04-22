@@ -8,14 +8,14 @@ using System.Data.SqlClient;
 
 namespace MyLibraryClient
 {
-    class AdoBridge
+    class Bridge
     {
-        public static AdoBridge adoBridge = null;
+        public static Bridge bridge = null;
         public string DataSource { get; private set; }
         public string InitialCatalog { get; private set; }
         public string UserId { get; private set; }
         private string Password { get; set; }
-        public AdoBridge(string user, string password)
+        public Bridge(string user, string password)
         {
             DataSource = @"D114\SQLEXPRESS";
             InitialCatalog = "MyLibrary";

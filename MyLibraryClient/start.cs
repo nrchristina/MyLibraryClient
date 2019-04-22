@@ -20,8 +20,8 @@ namespace MyLibraryClient
 
         public void enter_Click(object sender, EventArgs e)
         {
-            AdoBridge.adoBridge = new AdoBridge(enter_name.Text, password.Text);
-            Connector.str_connection = AdoBridge.adoBridge.GetConnectionString();
+            Bridge.bridge = new Bridge(enter_name.Text, password.Text);
+            Connector.str_connection = Bridge.bridge.GetConnectionString();
             if (string.IsNullOrEmpty(enter_name.Text) || string.IsNullOrEmpty(password.Text))
             {
                 MessageBox.Show("Введите логин и парооль");
@@ -29,8 +29,8 @@ namespace MyLibraryClient
             }
             else
             {
-                AdoBridge.adoBridge = new AdoBridge(enter_name.Text, password.Text);
-                using (var connection = AdoBridge.adoBridge.GetConnection())
+                Bridge.bridge = new Bridge(enter_name.Text, password.Text);
+                using (var connection = Bridge.bridge.GetConnection())
                 {
                     try
                     {

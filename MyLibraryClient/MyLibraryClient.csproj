@@ -64,7 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdoBridge.cs" />
+    <Compile Include="Bridge.cs" />
     <Compile Include="archive.cs">
       <SubType>Form</SubType>
     </Compile>

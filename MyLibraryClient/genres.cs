@@ -64,11 +64,9 @@ namespace MyLibraryClient
             information_list();
         }
 
-        //в разработке
-
-             private void add_genre()
-             {
-             try
+        private void add_genre()
+        {
+            try
             {
                 using (SqlConnection connection = new SqlConnection(connection_string))
                 {
@@ -86,11 +84,11 @@ namespace MyLibraryClient
                     }
                     connection.Close();
                 }
-             }
+            }
             catch (Exception ex)
-             {
+            {
                 MessageBox.Show(ex.Message.ToString(), ex.Source.ToString());
-             }
+            }
         }
 
         private void add_button_Click(object sender, EventArgs e)
