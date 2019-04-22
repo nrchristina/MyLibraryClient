@@ -31,7 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(subscription));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.refresh_button = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.add_button = new System.Windows.Forms.Button();
             this.input_subscription_price = new System.Windows.Forms.TextBox();
@@ -50,6 +53,7 @@
             this.delete_button = new System.Windows.Forms.Button();
             this.input_delete_subscription_id = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -72,7 +76,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.refresh_button);
+            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -81,15 +86,40 @@
             this.tabPage1.Text = "Виды абонементов";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // refresh_button
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(3, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(777, 396);
-            this.listBox1.TabIndex = 0;
+            this.refresh_button.Location = new System.Drawing.Point(0, 326);
+            this.refresh_button.Name = "refresh_button";
+            this.refresh_button.Size = new System.Drawing.Size(783, 76);
+            this.refresh_button.TabIndex = 7;
+            this.refresh_button.TabStop = false;
+            this.refresh_button.Text = "Обновить";
+            this.refresh_button.UseVisualStyleBackColor = true;
+            this.refresh_button.Click += new System.EventHandler(this.refresh_button_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(783, 328);
+            this.listView1.TabIndex = 8;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 50;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Описание";
+            this.columnHeader2.Width = 182;
             // 
             // tabPage2
             // 
@@ -101,7 +131,7 @@
             this.tabPage2.Location = new System.Drawing.Point(8, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(784, 403);
+            this.tabPage2.Size = new System.Drawing.Size(783, 402);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Добавить";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -114,6 +144,7 @@
             this.add_button.TabIndex = 25;
             this.add_button.Text = "Добавить";
             this.add_button.UseVisualStyleBackColor = true;
+            this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
             // input_subscription_price
             // 
@@ -121,7 +152,6 @@
             this.input_subscription_price.Name = "input_subscription_price";
             this.input_subscription_price.Size = new System.Drawing.Size(218, 31);
             this.input_subscription_price.TabIndex = 21;
-            this.input_subscription_price.TextChanged += new System.EventHandler(this.input_author_name_TextChanged);
             // 
             // input_subscription_description
             // 
@@ -129,7 +159,6 @@
             this.input_subscription_description.Name = "input_subscription_description";
             this.input_subscription_description.Size = new System.Drawing.Size(218, 31);
             this.input_subscription_description.TabIndex = 20;
-            this.input_subscription_description.TextChanged += new System.EventHandler(this.input_book_name_TextChanged);
             // 
             // label2
             // 
@@ -139,7 +168,6 @@
             this.label2.Size = new System.Drawing.Size(191, 25);
             this.label2.TabIndex = 16;
             this.label2.Text = "Цена абонемента";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -149,7 +177,6 @@
             this.label1.Size = new System.Drawing.Size(238, 25);
             this.label1.TabIndex = 15;
             this.label1.Text = "Описание абонемента";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabPage3
             // 
@@ -162,7 +189,7 @@
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Location = new System.Drawing.Point(8, 39);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(784, 403);
+            this.tabPage3.Size = new System.Drawing.Size(783, 402);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "Изменить";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -191,6 +218,7 @@
             this.alter_button.TabIndex = 30;
             this.alter_button.Text = "Изменить";
             this.alter_button.UseVisualStyleBackColor = true;
+            this.alter_button.Click += new System.EventHandler(this.alter_button_Click);
             // 
             // input_alter_subscription_price
             // 
@@ -231,7 +259,7 @@
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Location = new System.Drawing.Point(8, 39);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(784, 403);
+            this.tabPage4.Size = new System.Drawing.Size(783, 402);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Удалить";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -244,6 +272,7 @@
             this.delete_button.TabIndex = 31;
             this.delete_button.Text = "Удалить";
             this.delete_button.UseVisualStyleBackColor = true;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
             // input_delete_subscription_id
             // 
@@ -261,13 +290,20 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "ID абонемента";
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Стоимость";
+            this.columnHeader3.Width = 158;
+            // 
             // subscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 449);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "subscription";
             this.Text = "Абонементы";
             this.tabControl1.ResumeLayout(false);
@@ -286,7 +322,6 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.TextBox input_subscription_price;
@@ -305,5 +340,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox input_subscription_id;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button refresh_button;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

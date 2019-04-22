@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fine));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.refresh_button = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.add_button = new System.Windows.Forms.Button();
             this.input_fine_price = new System.Windows.Forms.TextBox();
@@ -49,11 +54,6 @@
             this.delete_button = new System.Windows.Forms.Button();
             this.input_delete_fine_id = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.refresh_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,6 +85,46 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список штрафов";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // refresh_button
+            // 
+            this.refresh_button.Location = new System.Drawing.Point(0, 217);
+            this.refresh_button.Name = "refresh_button";
+            this.refresh_button.Size = new System.Drawing.Size(858, 76);
+            this.refresh_button.TabIndex = 4;
+            this.refresh_button.TabStop = false;
+            this.refresh_button.Text = "Обновить";
+            this.refresh_button.UseVisualStyleBackColor = true;
+            this.refresh_button.Click += new System.EventHandler(this.refresh_button_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(858, 218);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 50;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Описание";
+            this.columnHeader2.Width = 220;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Размер";
+            this.columnHeader3.Width = 154;
             // 
             // tabPage2
             // 
@@ -255,53 +295,15 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "ID штрафа";
             // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(858, 218);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 50;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Описание";
-            this.columnHeader2.Width = 220;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Размер";
-            this.columnHeader3.Width = 154;
-            // 
-            // refresh_button
-            // 
-            this.refresh_button.Location = new System.Drawing.Point(0, 217);
-            this.refresh_button.Name = "refresh_button";
-            this.refresh_button.Size = new System.Drawing.Size(858, 76);
-            this.refresh_button.TabIndex = 4;
-            this.refresh_button.TabStop = false;
-            this.refresh_button.Text = "Обновить";
-            this.refresh_button.UseVisualStyleBackColor = true;
-            this.refresh_button.Click += new System.EventHandler(this.refresh_button_Click);
-            // 
             // fine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 340);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "fine";
             this.Text = "Штрафы";
             this.tabControl1.ResumeLayout(false);

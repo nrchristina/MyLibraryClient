@@ -143,13 +143,26 @@ namespace MyLibraryClient
                         command.Parameters.AddWithValue("id_output", input_output_id.Text);
                         command.Parameters.AddWithValue("actual_return_date", input_actual_return_date.Text);
                         command.ExecuteNonQuery();
-                        SqlCommand command_2 = new SqlCommand("UPDATE [FINES] SET [fine]=@input_fine WHERE [output]=@id_output", connection);
-                        command_2.Parameters.AddWithValue("id_output", input_output_id.Text);
-                        command_2.Parameters.AddWithValue("input_fine", input_fine.Text);
-                        command_2.ExecuteNonQuery();
+                        string[] fines = input_fine.Text.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                        for (int i=0; i<fines.Length; i++)
+                        {
+                            string current_fine = fines[i];
+                            SqlCommand command_2 = new SqlCommand("INSERT INTO [FINES] (fine,output) VALUES (@current_fine, @id_output)", connection);
+                            command_2.Parameters.AddWithValue("id_output", input_output_id.Text);
+                            command_2.Parameters.AddWithValue("current_fine", Convert.ToInt32(fines[i]));
+                            command_2.ExecuteNonQuery();
+                        }
+                        /*    SqlCommand command_2 = new SqlCommand("INSERT INTO [FINES] (fine,output) VALUES (@input_fine, @id_output)", connection);
+                            command_2.Parameters.AddWithValue("id_output", input_output_id.Text);
+                            command_2.Parameters.AddWithValue("input_fine", input_fine.Text);
+                            command_2.ExecuteNonQuery(); */
                         input_output_id.Clear();
                         input_actual_return_date.Clear();
                         input_fine.Clear();
+                        add_fine_button.Visible = true;
+                        input_fine.Visible = false;
+                        fine_id.Visible = false;
+
                     }
                     else if ((!string.IsNullOrEmpty(input_output_id.Text)) && (!string.IsNullOrWhiteSpace(input_output_id.Text)) &&
                         (!string.IsNullOrEmpty(input_actual_return_date.Text)) && (!string.IsNullOrWhiteSpace(input_actual_return_date.Text)) &&

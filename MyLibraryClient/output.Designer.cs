@@ -70,9 +70,10 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(869, 449);
+            this.tabControl1.Size = new System.Drawing.Size(434, 233);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
@@ -80,19 +81,21 @@
             // 
             this.tabPage1.Controls.Add(this.refresh_button);
             this.tabPage1.Controls.Add(this.listView1);
-            this.tabPage1.Location = new System.Drawing.Point(8, 39);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(853, 402);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(426, 207);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список выдач";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // refresh_button
             // 
-            this.refresh_button.Location = new System.Drawing.Point(-1, 313);
+            this.refresh_button.Location = new System.Drawing.Point(0, 163);
+            this.refresh_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.refresh_button.Name = "refresh_button";
-            this.refresh_button.Size = new System.Drawing.Size(854, 89);
+            this.refresh_button.Size = new System.Drawing.Size(427, 46);
             this.refresh_button.TabIndex = 3;
             this.refresh_button.TabStop = false;
             this.refresh_button.Text = "Обновить";
@@ -110,8 +113,9 @@
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(853, 315);
+            this.listView1.Size = new System.Drawing.Size(427, 166);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -134,12 +138,12 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "ID книги";
-            this.columnHeader4.Width = 70;
+            this.columnHeader4.Width = 71;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "ID читателя";
-            this.columnHeader5.Width = 80;
+            this.columnHeader5.Width = 82;
             // 
             // tabPage2
             // 
@@ -152,19 +156,21 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(783, 402);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(426, 207);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Выдать книгу";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // add_button
             // 
-            this.add_button.Location = new System.Drawing.Point(601, 173);
+            this.add_button.Location = new System.Drawing.Point(300, 90);
+            this.add_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_button.Name = "add_button";
-            this.add_button.Size = new System.Drawing.Size(127, 43);
+            this.add_button.Size = new System.Drawing.Size(64, 22);
             this.add_button.TabIndex = 25;
             this.add_button.Text = "Выдать";
             this.add_button.UseVisualStyleBackColor = true;
@@ -172,65 +178,73 @@
             // 
             // input_reader_id
             // 
-            this.input_reader_id.Location = new System.Drawing.Point(309, 259);
+            this.input_reader_id.Location = new System.Drawing.Point(154, 135);
+            this.input_reader_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_reader_id.Name = "input_reader_id";
-            this.input_reader_id.Size = new System.Drawing.Size(218, 31);
+            this.input_reader_id.Size = new System.Drawing.Size(111, 20);
             this.input_reader_id.TabIndex = 23;
             // 
             // input_book_id
             // 
-            this.input_book_id.Location = new System.Drawing.Point(309, 207);
+            this.input_book_id.Location = new System.Drawing.Point(154, 108);
+            this.input_book_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_book_id.Name = "input_book_id";
-            this.input_book_id.Size = new System.Drawing.Size(218, 31);
+            this.input_book_id.Size = new System.Drawing.Size(111, 20);
             this.input_book_id.TabIndex = 22;
             // 
             // input_return_date
             // 
-            this.input_return_date.Location = new System.Drawing.Point(309, 154);
+            this.input_return_date.Location = new System.Drawing.Point(154, 80);
+            this.input_return_date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_return_date.Name = "input_return_date";
-            this.input_return_date.Size = new System.Drawing.Size(218, 31);
+            this.input_return_date.Size = new System.Drawing.Size(111, 20);
             this.input_return_date.TabIndex = 21;
             // 
             // input_output_date
             // 
-            this.input_output_date.Location = new System.Drawing.Point(309, 102);
+            this.input_output_date.Location = new System.Drawing.Point(154, 53);
+            this.input_output_date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_output_date.Name = "input_output_date";
-            this.input_output_date.Size = new System.Drawing.Size(218, 31);
+            this.input_output_date.Size = new System.Drawing.Size(111, 20);
             this.input_output_date.TabIndex = 20;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(87, 265);
+            this.label6.Location = new System.Drawing.Point(44, 138);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 25);
+            this.label6.Size = new System.Drawing.Size(66, 13);
             this.label6.TabIndex = 18;
             this.label6.Text = "ID читателя";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(87, 213);
+            this.label5.Location = new System.Drawing.Point(44, 111);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 25);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "ID книги";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(87, 154);
+            this.label2.Location = new System.Drawing.Point(44, 80);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 25);
+            this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Дата возврата";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 102);
+            this.label1.Location = new System.Drawing.Point(44, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 25);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 15;
             this.label1.Text = "Дата выдачи";
             // 
@@ -244,34 +258,38 @@
             this.tabPage3.Controls.Add(this.alter_button);
             this.tabPage3.Controls.Add(this.input_output_id);
             this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(8, 39);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(783, 402);
+            this.tabPage3.Size = new System.Drawing.Size(426, 207);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Изменить";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // input_fine
             // 
-            this.input_fine.Location = new System.Drawing.Point(292, 252);
+            this.input_fine.Location = new System.Drawing.Point(146, 131);
+            this.input_fine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_fine.Name = "input_fine";
-            this.input_fine.Size = new System.Drawing.Size(218, 31);
+            this.input_fine.Size = new System.Drawing.Size(111, 20);
             this.input_fine.TabIndex = 36;
             // 
             // fine_id
             // 
             this.fine_id.AutoSize = true;
-            this.fine_id.Location = new System.Drawing.Point(96, 255);
+            this.fine_id.Location = new System.Drawing.Point(48, 133);
+            this.fine_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fine_id.Name = "fine_id";
-            this.fine_id.Size = new System.Drawing.Size(118, 25);
+            this.fine_id.Size = new System.Drawing.Size(60, 13);
             this.fine_id.TabIndex = 35;
             this.fine_id.Text = "ID штрафа";
             // 
             // add_fine_button
             // 
-            this.add_fine_button.Location = new System.Drawing.Point(101, 246);
+            this.add_fine_button.Location = new System.Drawing.Point(50, 128);
+            this.add_fine_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_fine_button.Name = "add_fine_button";
-            this.add_fine_button.Size = new System.Drawing.Size(243, 43);
+            this.add_fine_button.Size = new System.Drawing.Size(122, 22);
             this.add_fine_button.TabIndex = 34;
             this.add_fine_button.Text = "Добавить штраф";
             this.add_fine_button.UseVisualStyleBackColor = true;
@@ -279,25 +297,28 @@
             // 
             // input_actual_return_date
             // 
-            this.input_actual_return_date.Location = new System.Drawing.Point(292, 190);
+            this.input_actual_return_date.Location = new System.Drawing.Point(146, 99);
+            this.input_actual_return_date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_actual_return_date.Name = "input_actual_return_date";
-            this.input_actual_return_date.Size = new System.Drawing.Size(218, 31);
+            this.input_actual_return_date.Size = new System.Drawing.Size(111, 20);
             this.input_actual_return_date.TabIndex = 33;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(96, 193);
+            this.label4.Location = new System.Drawing.Point(48, 100);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 25);
+            this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 32;
             this.label4.Text = "Дата возврата";
             // 
             // alter_button
             // 
-            this.alter_button.Location = new System.Drawing.Point(572, 119);
+            this.alter_button.Location = new System.Drawing.Point(286, 62);
+            this.alter_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.alter_button.Name = "alter_button";
-            this.alter_button.Size = new System.Drawing.Size(133, 43);
+            this.alter_button.Size = new System.Drawing.Size(66, 22);
             this.alter_button.TabIndex = 31;
             this.alter_button.Text = "Изменить";
             this.alter_button.UseVisualStyleBackColor = true;
@@ -305,28 +326,31 @@
             // 
             // input_output_id
             // 
-            this.input_output_id.Location = new System.Drawing.Point(292, 125);
+            this.input_output_id.Location = new System.Drawing.Point(146, 65);
+            this.input_output_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_output_id.Name = "input_output_id";
-            this.input_output_id.Size = new System.Drawing.Size(218, 31);
+            this.input_output_id.Size = new System.Drawing.Size(111, 20);
             this.input_output_id.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 128);
+            this.label3.Location = new System.Drawing.Point(48, 67);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 25);
+            this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 29;
             this.label3.Text = "ID выдачи";
             // 
             // output
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 449);
+            this.ClientSize = new System.Drawing.Size(434, 233);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimizeBox = false;
             this.Name = "output";
             this.Text = "Выдача";
